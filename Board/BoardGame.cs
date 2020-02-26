@@ -4,7 +4,7 @@
     {
         public int Lines { get; set; }
         public int Columns { get; set; }
-        private Piece[,] Pieces;
+        private readonly Piece[,] Pieces;
 
         public BoardGame(int lines, int columns)
         {

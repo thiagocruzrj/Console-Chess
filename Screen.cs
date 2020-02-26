@@ -14,8 +14,9 @@ namespace ConsoleChess
                     if(board.piece(i, j) == null)
                     {
                         Console.Write("- ");
-                    }
+                    } else { 
                     Console.WriteLine(board.piece(i,j) + " ");
+                    }
                 }
                 Console.WriteLine();
             }

@@ -9,7 +9,7 @@ namespace ConsoleChess
         {
             BoardGame bor = new BoardGame(8, 8);
 
-
+            Screen.printBoard(bor);
 
             Console.ReadLine();
         }

@@ -18,10 +18,24 @@
             return Pieces[line, column];
         }
 
-        public void SetPiece(Piece p, Position pos)
+        public Piece Piece(Position pos)
+        {
+            return Pieces[pos.Line, pos.Column];
+        }
+
+        public void PutPiece(Piece p, Position pos)
         {
             Pieces[pos.Line, pos.Column] = p;
             p.Position = pos;
+        }
+
+        public bool ValidPostion(Position pos)
+        {
+            if (pos.Line < 0 || pos.Line >= Columns || pos.Column < 0 || pos.Column >= Columns)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

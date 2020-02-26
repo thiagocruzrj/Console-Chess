@@ -4,7 +4,7 @@
     {
         public int Lines { get; set; }
         public int Columns { get; set; }
-        private readonly Piece[,] Pieces;
+        private Piece[,] Pieces;
 
         public BoardGame(int lines, int columns)
         {
@@ -27,6 +27,16 @@
         {
             Pieces[pos.Line, pos.Column] = p;
             p.Position = pos;
+        }
+
+        public bool PieceExistent(Position pos)
+        {
+            if (PieceExistent(pos))
+            {
+                throw new BoardException("There's a piece in this position!");
+            }
+            ValidadePostion(pos);
+            return Piece(pos) != null;
         }
 
         public bool ValidPostion(Position pos)

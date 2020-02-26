@@ -8,14 +8,18 @@ namespace ConsoleChess
     {
         static void Main(string[] args)
         {
-            BoardGame bor = new BoardGame(8, 8);
+            try { 
+                BoardGame bor = new BoardGame(8, 8);
 
-            bor.PutPiece(new Tower(Color.Black, bor), new Position(0, 0));
-            bor.PutPiece(new Tower(Color.Black, bor), new Position(1, 3));
-            bor.PutPiece(new King(Color.Black, bor), new Position(2, 4));
+                bor.PutPiece(new Tower(Color.Black, bor), new Position(0, 0));
+                bor.PutPiece(new Tower(Color.Black, bor), new Position(1, 3));
+                bor.PutPiece(new King(Color.Black, bor), new Position(0, 2));
 
-            Screen.PrintBoard(bor);
-
+                Screen.PrintBoard(bor);
+            } catch (BoardException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadLine();
         }
     }

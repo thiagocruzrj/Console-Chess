@@ -37,5 +37,13 @@
             }
             return true;
         }
+
+        public void ValidadePostion(Position pos)
+        {
+            if(!ValidPostion(pos))
+            {
+                throw new BoardException("Invalid Position!");
+            }
+        }
     }
 }

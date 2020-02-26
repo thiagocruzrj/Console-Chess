@@ -2,15 +2,15 @@
 
 namespace ConsoleChess.Chess
 {
-    class King : Piece
+    class Tower : Piece
     {
-        public King(Color color, BoardGame board) : base(color, board)
+        public Tower(Color color, BoardGame board) : base(color, board)
         {
         }
 
         public override string ToString()
         {
-            return "R";
+            return "T";
         }
     }
 }

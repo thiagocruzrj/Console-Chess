@@ -2,9 +2,9 @@
 {
     class Piece
     {
-        public Piece(Position position, Color color, BoardGame board)
+        public Piece(Color color, BoardGame board)
         {
-            Position = position;
+            Position = null;
             Color = color;
             BoardGame = board;
             QtMoves = 0;

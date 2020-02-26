@@ -25,6 +25,13 @@ namespace ConsoleChess.Chess
             bor.PutPiece(new King(Color.White, bor), new ChessPosition('d', 1).ToPosition());
             bor.PutPiece(new Tower(Color.White, bor), new ChessPosition('e', 1).ToPosition());
             bor.PutPiece(new Tower(Color.White, bor), new ChessPosition('e', 2).ToPosition());
+
+            bor.PutPiece(new Tower(Color.Black, bor), new ChessPosition('c', 8).ToPosition());
+            bor.PutPiece(new Tower(Color.Black, bor), new ChessPosition('c', 7).ToPosition());
+            bor.PutPiece(new Tower(Color.Black, bor), new ChessPosition('d', 7).ToPosition());
+            bor.PutPiece(new King(Color.Black, bor), new ChessPosition('d', 8).ToPosition());
+            bor.PutPiece(new Tower(Color.Black, bor), new ChessPosition('e', 8).ToPosition());
+            bor.PutPiece(new Tower(Color.Black, bor), new ChessPosition('e', 7).ToPosition());
         }
 
         public void ExecuteMoviment(Position origin, Position destiny)

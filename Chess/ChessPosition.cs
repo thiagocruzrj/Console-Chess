@@ -1,4 +1,6 @@
-﻿namespace ConsoleChess.Chess
+﻿using ConsoleChess.Board;
+
+namespace ConsoleChess.Chess
 {
     class ChessPosition
     {
@@ -10,6 +12,11 @@
 
         public char Column { get; set; }
         public int Line { get; set; }
+
+        public Position ToPosition()
+        {
+            return new Position(8 - Line, Column - 'a');
+        }
 
         public override string ToString()
         {

@@ -8,9 +8,20 @@ namespace ConsoleChess
     {
         static void Main(string[] args)
         {
-            ChessPosition pos = new ChessPosition('c', 7);
-            Console.WriteLine(pos);
-            Console.WriteLine(pos.ToPosition());
+            try { 
+                BoardGame bor = new BoardGame(8, 8);
+
+                bor.PutPiece(new Tower(Color.Black, bor), new Position(0, 0));
+                bor.PutPiece(new Tower(Color.Black, bor), new Position(1, 3));
+                bor.PutPiece(new King(Color.Black, bor), new Position(0, 2));
+
+                bor.PutPiece(new Tower(Color.White, bor), new Position(3, 5));
+
+                Screen.PrintBoard(bor);
+            } catch (BoardException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadLine();
         }
     }

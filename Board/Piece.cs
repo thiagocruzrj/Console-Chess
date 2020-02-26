@@ -14,5 +14,10 @@
         public Color Color { get; protected set; }
         public int QtMoves { get; protected set; }
         public BoardGame BoardGame { get; set; }
+
+        public void IncreaseMoveQuantity()
+        {
+            QtMoves++;
+        }
     }
 }
